@@ -31,6 +31,11 @@ angular
         controller: 'AboutCtrl',
         controllerAs: 'about'
       })
+      .when('/date', {
+        templateUrl: 'views/date.html',
+        controller: 'DateCtrl',
+        controllerAs: 'date'
+      })
       .otherwise({
         redirectTo: '/'
       });
