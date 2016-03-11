@@ -7,13 +7,13 @@
  * # DateCtrl
  * Controller of the practiceApp
  */
-angular.module('practiceApp')
-  .controller('DateCtrl', function () {
-    this.awesomeThings = [
-      'HTML5 Boilerplate',
-      'AngularJS',
-      'Karma',
-      'angularMoment'
+angular
+	.module('practiceApp')
+    .controller('DateCtrl', function () {
+      this.awesomeThings = [
+        'HTML5 Boilerplate',
+        'AngularJS',
+        'Karma',
+        'angularMoment'
     ];
-    console.log('dupa')
-  });
+ });
