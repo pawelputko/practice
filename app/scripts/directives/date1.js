@@ -11,7 +11,8 @@ angular.module('practiceApp')
           },
       	replace: true,
       	controller: function ($scope) {
-				    $scope.date = moment($scope).format($scope.momentFormat);
+				    $scope.date = moment().format($scope.momentFormat);
+            console.log($scope);
       		}
       	};
     });

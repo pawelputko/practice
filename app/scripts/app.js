@@ -36,6 +36,11 @@ angular
         controller: 'DateCtrl',
         controllerAs: 'date'
       })
+      .when('/box', {
+        templateUrl: 'views/box.html',
+        controller: 'BoxCtrl',
+        controllerAs: 'box'
+      })
       .otherwise({
         redirectTo: '/'
       });
