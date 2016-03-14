@@ -4,7 +4,7 @@
 angular.module('practiceApp')
   	.directive('boxDirective', function () {
     	return {
-    		template: '<div style="background-color : {{rColor}}; height : {{rHeight}}; width : {{rWidth}}"></div>',
+    		template: '<div style="background-color : {{rColor}}; height : {{rHeight}}px; width : {{rWidth}}px"></div>',
       	scope: {
             rWidth: '=',
             rHeight: '=',
