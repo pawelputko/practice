@@ -4,15 +4,16 @@
 angular.module('practiceApp')
   	.directive('boxDirective', function () {
     	return {
-    		template: '<div style="background-color : {{rColor}}; height : {{rHeight}}px; width : {{rWidth}}px"></div>',
+        restrict: 'E',
       	scope: {
             rWidth: '=',
             rHeight: '=',
             rColor: '='
           },
-      	replace: true,
-      	controller: function ($scope) {
-				    console.log($scope); 
-      		}
-      	};
+        link: function($scope, element){
+          element.html('<div class="box">bla bla bla</div>');         
+          $('div.box').css({"background-color" : $scope.rColor, "height" : $scope.rHeight, "width" : $scope.rWidth});
+         
+        }
+      		};
     });
