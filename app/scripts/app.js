@@ -17,7 +17,7 @@ angular
     'ngResource',
     'ngRoute',
     'ngSanitize',
-    'ngTouch'
+    'ngMaterial'
   ])
   .config(function ($routeProvider) {
     $routeProvider
@@ -40,6 +40,11 @@ angular
         templateUrl: 'views/box.html',
         controller: 'BoxCtrl',
         controllerAs: 'box'
+      })
+      .when('/fuck', {
+        templateUrl: 'views/faaslist.html',
+        controller: 'FuckCtrl',
+        controllerAs: 'fuck'
       })
       .otherwise({
         redirectTo: '/'

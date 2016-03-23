@@ -6,6 +6,7 @@ angular.module('practiceApp')
     	return {
         template: '<div>bla bla bla</div>',
         restrict: 'E',
+        replace: true,
       	scope: {
             rWidth: '=',
             rHeight: '=',
