@@ -46,6 +46,11 @@ angular
         controller: 'FuckCtrl',
         controllerAs: 'fuck'
       })
+      .when('/fuck/detail/:name', {
+        templateUrl: 'views/faasDetail.html',
+        controller: 'DetailCtrl',
+        controllerAs: 'detail'
+      })
       .otherwise({
         redirectTo: '/'
       });
