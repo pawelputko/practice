@@ -22,6 +22,9 @@ angular
         }
         var self = this;
         self.name = $routeParams.name;
-                
+        
+        $scope.myFunc = function(){
+            window.location = 'http://foaas.com/' + self.name + '/' + $scope.example.text;
+        };
     
  });
