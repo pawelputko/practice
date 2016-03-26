@@ -8,7 +8,7 @@ angular.module('practiceApp')
         restrict: 'E',
         scope: {},
         controller: function ($scope, $http) {
-            $http.get('https://foaas.com/operations').then(function(response){
+            $http.get('https://foaas.com/operations?callback=?').then(function(response){
               $scope.myData = response.data;
             })
           }

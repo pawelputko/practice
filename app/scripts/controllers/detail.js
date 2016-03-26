@@ -9,7 +9,7 @@
  */
 angular
 	.module('practiceApp')
-    .controller('DetailCtrl', function ($scope, $routeParams) {
+    .controller('DetailCtrl', function ($scope, $routeParams, $http) {
       this.awesomeThings = [
         'HTML5 Boilerplate',
         'AngularJS',
@@ -24,7 +24,10 @@ angular
         self.name = $routeParams.name;
         
         $scope.myFunc = function(){
-            window.location = 'http://foaas.com/' + self.name + '/' + $scope.example.text;
+            $http.get('https://foaas.com/' + self.name + '/' + $scope.example.text).then(function (data) { 
+                console.log(data);
+                $scope.gowno = data.data;
+            });
         };
     
  });

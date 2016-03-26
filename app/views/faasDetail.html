@@ -1,4 +1,18 @@
 
 <h4>Type your name</h4>
 <input type="text" ng-model="example.text" ng-keyup="$event.keyCode == 13 && myFunc()"/>
-<md-button class="md-warn md-raised" ng-href="http://foaas.com/{{detail.name}}/{{example.text}}">GO!</md-button>
+<md-button class="md-warn md-raised" ng-click="myFunc()">GO!</md-button>
+
+<div ng-show="gowno" style="background-color: black; 
+	width: 300px;
+	height: 300px; 
+	border-radius: 50%">
+	<p style="color: orangeRed;
+		position: relative;
+		left: 50px;
+		top: 100px;">{{gowno.message}}</p>
+	<p style="color: cyan; 
+		position: relative;
+		top: 120px;
+		left: 200px">{{gowno.subtitle}}</p>
+</div>
